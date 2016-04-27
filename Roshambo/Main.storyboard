@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Player Choice View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlayerChoiceViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUF-Rt-qph" userLabel="Rock">
+                                <rect key="frame" x="263" y="145" width="75" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="jEV-3q-d2H"/>
+                                    <constraint firstAttribute="height" constant="65" id="t70-cv-Hum"/>
+                                </constraints>
+                                <state key="normal" title="Rock" image="rock"/>
+                                <connections>
+                                    <action selector="playRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lob-zf-VCE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZK-Yo-YRY" userLabel="Scissors">
+                                <rect key="frame" x="363" y="267" width="75" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="8ve-0E-i4c"/>
+                                    <constraint firstAttribute="height" constant="65" id="GQC-6c-QB1"/>
+                                </constraints>
+                                <state key="normal" title="Scissors" image="scissors"/>
+                                <connections>
+                                    <segue destination="aoK-q9-rrg" kind="presentation" identifier="resultsSegue" id="LeT-ai-8JB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ph-zY-N7h" userLabel="Paper">
+                                <rect key="frame" x="161" y="267" width="75" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="cC6-ES-mTz"/>
+                                    <constraint firstAttribute="height" constant="65" id="xGm-ys-wpo"/>
+                                </constraints>
+                                <state key="normal" title="Paper" image="paper"/>
+                                <connections>
+                                    <action selector="playPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WqS-dx-s5P"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfu-sn-Y95">
+                                <rect key="frame" x="260" y="404" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ozg-9c-cTW"/>
+                                    <constraint firstAttribute="width" constant="78" id="q8f-HV-eBj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0ZK-Yo-YRY" firstAttribute="top" secondItem="wUF-Rt-qph" secondAttribute="top" constant="122" id="2fQ-KU-ycH"/>
+                            <constraint firstItem="9Ph-zY-N7h" firstAttribute="top" secondItem="wUF-Rt-qph" secondAttribute="top" constant="122" id="4QG-QL-fYF"/>
+                            <constraint firstItem="cfu-sn-Y95" firstAttribute="top" secondItem="0ZK-Yo-YRY" secondAttribute="top" constant="137" id="DuT-aw-KUw"/>
+                            <constraint firstItem="cfu-sn-Y95" firstAttribute="leading" secondItem="wUF-Rt-qph" secondAttribute="leading" constant="-3" id="GgD-Q2-7SS"/>
+                            <constraint firstItem="wUF-Rt-qph" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="125" id="dCF-uw-lfD"/>
+                            <constraint firstItem="wUF-Rt-qph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyj-Ur-37c"/>
+                            <constraint firstItem="0ZK-Yo-YRY" firstAttribute="leading" secondItem="wUF-Rt-qph" secondAttribute="leading" constant="100" id="hbm-FA-tGu"/>
+                            <constraint firstItem="cfu-sn-Y95" firstAttribute="top" secondItem="9Ph-zY-N7h" secondAttribute="top" constant="137" id="nSQ-nr-W37"/>
+                            <constraint firstItem="9Ph-zY-N7h" firstAttribute="trailing" secondItem="wUF-Rt-qph" secondAttribute="trailing" constant="-102" id="qLI-Pc-R9h"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="308"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="v04-E5-fCo">
+            <objects>
+                <viewController storyboardIdentifier="resultsVC" id="aoK-q9-rrg" customClass="ResultsViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="srf-ll-8PP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lcm-SS-Qch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qvS-Nq-ZZt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koh-P7-Alb">
+                                <rect key="frame" x="279" y="428" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-5r-tmk">
+                                <rect key="frame" x="265" y="457" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="aoK-q9-rrg" eventType="touchUpInside" id="KVD-pP-iy0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Slr-bP-deo">
+                                <rect key="frame" x="175" y="185" width="250" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="b65-VN-lIA"/>
+                                    <constraint firstAttribute="width" constant="250" id="pGl-ru-Ha4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Slr-bP-deo" firstAttribute="centerX" secondItem="qvS-Nq-ZZt" secondAttribute="centerX" id="62w-ZP-jrW"/>
+                            <constraint firstItem="Slr-bP-deo" firstAttribute="centerX" secondItem="qvS-Nq-ZZt" secondAttribute="centerX" id="6rV-Ms-E3k"/>
+                            <constraint firstItem="p19-5r-tmk" firstAttribute="centerX" secondItem="koh-P7-Alb" secondAttribute="centerX" id="ALk-vO-10X"/>
+                            <constraint firstItem="koh-P7-Alb" firstAttribute="centerX" secondItem="Slr-bP-deo" secondAttribute="centerX" id="Gee-U3-0iU"/>
+                            <constraint firstItem="Slr-bP-deo" firstAttribute="centerY" secondItem="qvS-Nq-ZZt" secondAttribute="centerY" id="cQZ-Ck-dht"/>
+                            <constraint firstItem="p19-5r-tmk" firstAttribute="top" secondItem="koh-P7-Alb" secondAttribute="bottom" constant="8" id="ikV-jG-q9Y"/>
+                            <constraint firstItem="koh-P7-Alb" firstAttribute="top" secondItem="Slr-bP-deo" secondAttribute="bottom" constant="13" id="wsG-BK-9Wo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultsImage" destination="Slr-bP-deo" id="SJV-fv-V5I"/>
+                        <outlet property="resultsLabel" destination="koh-P7-Alb" id="LVd-YQ-vy3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abw-7S-Vgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="322"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
+</document>
